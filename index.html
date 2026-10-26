@@ -16,7 +16,7 @@
         body {
             min-height: 100vh;
             display: flex;
-            align-ittuis: center;
+            align-items: center;
             justify-content: center;
             overflow: hidden;
             font-family: "Segoe UI", sans-serif;
@@ -50,7 +50,7 @@
             }
         }
 
-        .tuioji {
+        .emoji {
             font-size: 75px;
             margin-bottom: 15px;
             animation: heartbeat 1.5s infinite;
@@ -181,20 +181,20 @@
 <body>
     <main class="card">
         <section id="question">
-            <div class="tuioji">💌</div>
+            <div class="emoji">💌</div>
 
-            <h1>Gửi Trà My...</h1>
+            <h1>Gửi Trà My Cute...</h1>
 
             <p class="message">
-                tui có chuyện này muốn nói với bà lâu rồi.<br />
+                Tui có chuyện này muốn nói với bà lâu rồi.<br />
                 Nói ra thì hơi ngại, nhưng mà... 🥹<br /><br />
-                <strong>tui..... thích bà mất rồi!</strong><br />
-                bà có muốn choa tui một cơ hội tìm hiểu bà không?
+                <strong>Tui..... thích bà mất rồi!</strong><br />
+                bà có muốn choa Tui một cơ hội tìm hiểu bà không?
             </p>
 
             <div class="buttons">
                 <button class="yes" onclick="accept()">
-                    💗 Đồng ý, cho tui cơ hội!
+                    💗 Đồng ý, cho Tui cơ hội!
                 </button>
 
                 <button class="think" id="thinkBtn">
@@ -208,7 +208,7 @@
         </section>
 
         <section id="result">
-            <div class="tuioji">🥰</div>
+            <div class="emoji">🥰</div>
             <h1>Year!!!</h1>
 
             <p class="message" id="resultMessage">
@@ -227,14 +227,14 @@
 
     <script>
         // THAY THÔNG TIN CỦA BẠN Ở ĐÂY
-        const myName = "tui";
+        const myName = "Tui";
         const myContact = ""; // Ví dụ: số điện thoại hoặc username
 
         function accept() {
-            document.getEltuientById("question").style.display = "none";
-            document.getEltuientById("result").style.display = "block";
+            document.getElementById("question").style.display = "none";
+            document.getElementById("result").style.display = "block";
 
-            document.getEltuientById("resultMessage").innerHTML =
+            document.getElementById("resultMessage").innerHTML =
                 `Cảm ơn bà đã cho <strong>${myName}</strong> một cơ hội! 💖<br><br>` +
                 "Mình cứ từ từ tìm hiểu nhau nhé. 🌷";
 
@@ -243,7 +243,7 @@
             }
         }
 
-        const thinkBtn = document.getEltuientById("thinkBtn");
+        const thinkBtn = document.getElementById("thinkBtn");
 
         function moveThinkButton() {
             thinkBtn.classList.add("running");
@@ -259,7 +259,7 @@
         }
 
         thinkBtn.addEventListener("mouseenter", moveThinkButton);
-đ
+
         thinkBtn.addEventListener("touchstart", function (event) {
             event.preventDefault();
             moveThinkButton();
@@ -274,12 +274,12 @@
         }
 
         function goBack() {
-            document.getEltuientById("result").style.display = "none";
-            document.getEltuientById("question").style.display = "block";
+            document.getElementById("result").style.display = "none";
+            document.getElementById("question").style.display = "block";
         }
 
         function createHeart() {
-            const heart = document.createEltuient("div");
+            const heart = document.createElement("div");
             heart.className = "heart";
             heart.textContent = ["💗", "💕", "💖", "💘", "🌸"][
                 Math.floor(Math.random() * 5)
@@ -291,7 +291,7 @@
 
             document.body.appendChild(heart);
 
-            setTimeout(() => heart.rtuiove(), 7000);
+            setTimeout(() => heart.remove(), 7000);
         }
 
         // Thỉnh thoảng tạo trái tim bay nền.
