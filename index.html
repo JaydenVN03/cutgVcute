@@ -16,7 +16,7 @@
         body {
             min-height: 100vh;
             display: flex;
-            align-items: center;
+            align-ittuis: center;
             justify-content: center;
             overflow: hidden;
             font-family: "Segoe UI", sans-serif;
@@ -50,7 +50,7 @@
             }
         }
 
-        .emoji {
+        .tuioji {
             font-size: 75px;
             margin-bottom: 15px;
             animation: heartbeat 1.5s infinite;
@@ -181,24 +181,24 @@
 <body>
     <main class="card">
         <section id="question">
-            <div class="emoji">💌</div>
+            <div class="tuioji">💌</div>
 
-            <h1>Gửi Vân Cute...</h1>
+            <h1>Gửi Trà My...</h1>
 
             <p class="message">
-                Oem có chuyện này muốn nói với chị lâu rồi.<br />
+                tui có chuyện này muốn nói với bà lâu rồi.<br />
                 Nói ra thì hơi ngại, nhưng mà... 🥹<br /><br />
-                <strong>Oem..... thích chị mất rồi!</strong><br />
-                Chị có muốn choa oem một cơ hội tìm hiểu chị không?
+                <strong>tui..... thích bà mất rồi!</strong><br />
+                bà có muốn choa tui một cơ hội tìm hiểu bà không?
             </p>
 
             <div class="buttons">
                 <button class="yes" onclick="accept()">
-                    💗 Đồng ý, cho oem cơ hội!
+                    💗 Đồng ý, cho tui cơ hội!
                 </button>
 
                 <button class="think" id="thinkBtn">
-                 💭 Chị suy nghĩ đã...
+                 💭 Để tui suy nghĩ đã...
                 </button>
             </div>
 
@@ -208,7 +208,7 @@
         </section>
 
         <section id="result">
-            <div class="emoji">🥰</div>
+            <div class="tuioji">🥰</div>
             <h1>Year!!!</h1>
 
             <p class="message" id="resultMessage">
@@ -216,7 +216,7 @@
             </p>
 
             <button class="yes" onclick="sendMessage()">
-                💌 Nhắn tin cho em
+                💌 Nhắn tin cho tui
             </button>
 
             <button class="reset" onclick="goBack()">
@@ -227,15 +227,15 @@
 
     <script>
         // THAY THÔNG TIN CỦA BẠN Ở ĐÂY
-        const myName = "Oem";
+        const myName = "tui";
         const myContact = ""; // Ví dụ: số điện thoại hoặc username
 
         function accept() {
-            document.getElementById("question").style.display = "none";
-            document.getElementById("result").style.display = "block";
+            document.getEltuientById("question").style.display = "none";
+            document.getEltuientById("result").style.display = "block";
 
-            document.getElementById("resultMessage").innerHTML =
-                `Cảm ơn chị đã cho <strong>${myName}</strong> một cơ hội! 💖<br><br>` +
+            document.getEltuientById("resultMessage").innerHTML =
+                `Cảm ơn bà đã cho <strong>${myName}</strong> một cơ hội! 💖<br><br>` +
                 "Mình cứ từ từ tìm hiểu nhau nhé. 🌷";
 
             for (let i = 0; i < 35; i++) {
@@ -243,7 +243,7 @@
             }
         }
 
-        const thinkBtn = document.getElementById("thinkBtn");
+        const thinkBtn = document.getEltuientById("thinkBtn");
 
         function moveThinkButton() {
             thinkBtn.classList.add("running");
@@ -259,7 +259,7 @@
         }
 
         thinkBtn.addEventListener("mouseenter", moveThinkButton);
-
+đ
         thinkBtn.addEventListener("touchstart", function (event) {
             event.preventDefault();
             moveThinkButton();
@@ -274,12 +274,12 @@
         }
 
         function goBack() {
-            document.getElementById("result").style.display = "none";
-            document.getElementById("question").style.display = "block";
+            document.getEltuientById("result").style.display = "none";
+            document.getEltuientById("question").style.display = "block";
         }
 
         function createHeart() {
-            const heart = document.createElement("div");
+            const heart = document.createEltuient("div");
             heart.className = "heart";
             heart.textContent = ["💗", "💕", "💖", "💘", "🌸"][
                 Math.floor(Math.random() * 5)
@@ -291,7 +291,7 @@
 
             document.body.appendChild(heart);
 
-            setTimeout(() => heart.remove(), 7000);
+            setTimeout(() => heart.rtuiove(), 7000);
         }
 
         // Thỉnh thoảng tạo trái tim bay nền.
